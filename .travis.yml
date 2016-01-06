@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '4.0'
+branches:
+  except:
+    - releases
+env:
+  global:
+    secure: txXartnu2lscHcRa3IBi1E4d+cxvbiOQsRWl3jvgR6fgo3m+Tl41WKVzYoAU/mf8IVaUmZx1UJ/BwB1FBekLCCDnixWFi1Qmj0nQ5thRLXbXh/ZUivXF08Yize+qM/RZooWvpq3JxeR2mcqMYNiMmdEUtQ+O7SbV9Xz8sKQIgoG1+I7Tj4a6K6/AtLz1nIHqHud8/4w8eeOvXwDhqyKqVfSj5EzeHQoG34rTjf/jDs6YVoJAdPQBfHxr9vg1q8l9FLVubrxqT7RRqr4QNTFhrkZFxE5k8FrJu1citUuaGNflCIwcNKP0fn4U0n2IC+60Z63Xag1D6rPeIYtASOIEczCmYQLj7fMRKg4SmE3vfBV6gw7X3vGF2d8srd7EOUmb9xnVGsJTjw6h3dzPiy9lIcgShne7+nE6uzvJUz0Ywfd6KIvryzBiBvUjrOMdyuq7r3kgMYRvcM592kFu2LtjAitixk4Ti88ooYIDlYKoZ+4LHMokGDqBGiQOKpEk3+vLF1eVoNv4rkRk5xkOIAkq8RXSarTvTImeaZxEXKPWrcPtHSWRlCSE9Uf5pjNoXWrD42TOido++UC/OzwBpbYcfCp/9VvyQYjAvQd7Iigzww/p88JolYGywT9CsZ65oHg1eaafOma0LVTt6EwO+mBLDmT7NcaHEGatAH32F6jb/60=
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: "npm run-script branch-release"
+  on:
+    branch: master
