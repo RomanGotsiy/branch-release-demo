@@ -4,9 +4,9 @@
   "description": "Demo package for branch-release package",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0",
+    "test": "echo \"Tests should be here\" && exit 0",
     "build-dist": "node build-dist.js",
-    "branch-release": "branch-release"
+    "release-to-branch": "branch-release"
   },
   "keywords": [
     "demo"
@@ -14,7 +14,7 @@
   "author": "Roman Hotsiy <gotsijroman@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "branch-release": "0.1.1",
+    "branch-release": "0.2.2",
     "mkdirp": "^0.5.1"
   }
 }

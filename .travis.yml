@@ -3,13 +3,15 @@ node_js:
 - '4.0'
 branches:
   except:
-    - releases
+  - releases
 env:
   global:
-    secure: txXartnu2lscHcRa3IBi1E4d+cxvbiOQsRWl3jvgR6fgo3m+Tl41WKVzYoAU/mf8IVaUmZx1UJ/BwB1FBekLCCDnixWFi1Qmj0nQ5thRLXbXh/ZUivXF08Yize+qM/RZooWvpq3JxeR2mcqMYNiMmdEUtQ+O7SbV9Xz8sKQIgoG1+I7Tj4a6K6/AtLz1nIHqHud8/4w8eeOvXwDhqyKqVfSj5EzeHQoG34rTjf/jDs6YVoJAdPQBfHxr9vg1q8l9FLVubrxqT7RRqr4QNTFhrkZFxE5k8FrJu1citUuaGNflCIwcNKP0fn4U0n2IC+60Z63Xag1D6rPeIYtASOIEczCmYQLj7fMRKg4SmE3vfBV6gw7X3vGF2d8srd7EOUmb9xnVGsJTjw6h3dzPiy9lIcgShne7+nE6uzvJUz0Ywfd6KIvryzBiBvUjrOMdyuq7r3kgMYRvcM592kFu2LtjAitixk4Ti88ooYIDlYKoZ+4LHMokGDqBGiQOKpEk3+vLF1eVoNv4rkRk5xkOIAkq8RXSarTvTImeaZxEXKPWrcPtHSWRlCSE9Uf5pjNoXWrD42TOido++UC/OzwBpbYcfCp/9VvyQYjAvQd7Iigzww/p88JolYGywT9CsZ65oHg1eaafOma0LVTt6EwO+mBLDmT7NcaHEGatAH32F6jb/60=
+  - secure: jk1UvqyJ4TrrY6CVsAVwK5w57NYHnNZlmaWw8sHp61CM0QFshcfQbRkQETlAWrGijmuOQfUwBtvoc5Te61IGPOK8W/65h0TbJmSC1q8zDyH1nnGaSquAOQeg/ql7L7R95WCGk68C/QMLwcNcQsnvfwR04yWJSo9AkjWs8uJJHK9DvLGT5OTk84vS69pthQI4AhOTHipNIjHOLn/iaDWb2ZzIFijgOHkx8ljYwlLQXDht6/bxTcnTuFSz+vFckDsTYHVQuHGv/idHDk3BPLmSRwv/Vq6sA/ilFmJK9agwBqe0uAYgGMSzKXDjiOMbo4VsRICGz6rqEPoGZ6xiHji00H77Kjccih1PnM5nb3HLxrRHgTsH8AmcPC8MVQPX7FmEGe43SIpG1SKoLbuNkSNGMXoJDN0vGrD7NZd2rCkbS1YvX4opv3JBUiiHOLdrRQgRdWV6O8+6N6v3E2mlI7LlfQeansU3PIKvNsdmbtmITCGjNP2cjk2D/7ZVH6PTG2w1JoPbfFLpqKtVUB60/M+aSZklz/Kc0uKMjTY/07k2QG8cQ6cTyogTPa24aIMytKpJlMY2q77KDoSO/aLx1j6pL9WltpqfBOFGPSwMxjIbP8fSBO7peBfnhOYOy8tQPyMIpRdwRZdQziPqyMMrxitAbV8e1l54hiIKNP43K4rcy8s=
+  - GIT_AUTHOR_EMAIL: branch-release-bot@users.noreply.github.com
+  - GIT_AUTHOR_NAME: BranchReleaseDemoBot
 deploy:
   skip_cleanup: true
   provider: script
-  script: "npm run-script branch-release"
+  script: npm run release-to-branch
   on:
     branch: master
