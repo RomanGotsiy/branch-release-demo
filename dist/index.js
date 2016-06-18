@@ -1,3 +1,3 @@
 function sayHello() {
-  console.log('Hello 0.3656090530566871');
+  console.log('Hello 0.08343082829378545');
 }
